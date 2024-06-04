@@ -1,0 +1,530 @@
+/* root variable settings */
+
+:root{
+
+    --ff-primary: "League Spartan", sans-serif;
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+
+    --fw-bold: 700;
+
+
+    --fs-300: 1rem;
+    --fs-500: 2rem;
+    --fs-700: 3rem;
+
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* supporting classes */
+
+.th1{
+
+    --clr-bg-main: hsl(222, 26%, 31%);
+    --clr-txt-main: hsl(0, 0%, 100%);
+
+    --clr-bg-toggle: hsl(223, 31%, 20%);
+    --clr-bg-screen: hsl(224, 36%, 15%);
+
+    --clr-bg-keypad: hsl(223, 31%, 20%);
+
+    --clr-bg-key: hsl(30, 25%, 89%);
+    --clr-shdw-key: hsl(28, 16%, 65%);
+    --clr-active-key: hsl(0, 0%, 100%);
+    --clr-txt-key: hsl(221, 14%, 31%);
+
+    --clr-bg-accent-key: hsl(225, 21%, 49%);
+    --clr-shdw-accent-key: hsl(224, 28%, 35%);
+    --clr-active-accent-key: hsl(224, 51%, 76%);
+    --clr-txt-accent-key: hsl(0, 0%, 100%);
+
+    --clr-bg-contrast-key: hsl(6, 63%, 50%);
+    --clr-shdw-contrast-key: hsl(6, 70%, 34%);
+    --clr-active-contrast-key: hsl(6, 93%, 67%);
+    --clr-txt-contrast-key: hsl(0, 0%, 100%);
+
+}
+
+.th2{
+
+    --clr-bg-main: hsl(0, 0%, 90%);
+    --clr-txt-main: hsl(60, 10%, 19%);
+
+    --clr-bg-toggle: hsl(0, 5%, 81%);
+    --clr-bg-screen: hsl(0, 0%, 93%);
+
+    --clr-bg-keypad: hsl(0, 5%, 81%);
+
+    --clr-bg-key: hsl(45, 7%, 89%);
+    --clr-shdw-key: hsl(35, 11%, 61%);
+    --clr-active-key: hsl(0, 0%, 100%);
+    --clr-txt-key: hsl(60, 10%, 19%);
+
+    --clr-bg-accent-key: hsl(185, 42%, 37%);
+    --clr-shdw-accent-key: hsl(185, 58%, 25%);
+    --clr-active-accent-key: hsl(185, 41%, 56%);
+    --clr-txt-accent-key: hsl(0, 0%, 100%); 
+
+    --clr-bg-contrast-key: hsl(25, 98%, 40%);
+    --clr-shdw-contrast-key: hsl(25, 99%, 27%);
+    --clr-active-contrast-key: hsl(25, 100%, 61%);
+    --clr-txt-contrast-key: hsl(0, 0%, 100%);
+
+}
+
+.th3{
+
+    --clr-bg-main: hsl(268, 75%, 9%);
+    --clr-txt-main: hsl(52, 100%, 62%);
+
+    --clr-bg-toggle: hsl(268, 71%, 12%);
+    --clr-bg-screen: hsl(268, 71%, 12%);
+    --clr-bg-keypad: hsl(268, 71%, 12%);
+
+    --clr-bg-key: hsl(268, 47%, 21%);
+    --clr-shdw-key: hsl(290, 70%, 36%);
+    --clr-active-key: hsl(268, 54%, 44%);
+    --clr-txt-key: hsl(52, 100%, 62%);
+
+    --clr-bg-accent-key: hsl(281, 89%, 26%);
+    --clr-shdw-accent-key: hsl(285, 91%, 52%);
+    --clr-active-accent-key: hsl(281, 57%, 44%);
+    --clr-txt-accent-key: hsl(0, 0%, 100%);
+
+    --clr-bg-contrast-key: hsl(176, 100%, 44%);
+    --clr-shdw-contrast-key: hsl(177, 92%, 70%);
+    --clr-active-contrast-key: hsl(177, 100%, 79%);
+    --clr-txt-contrast-key: hsl(198, 20%, 13%);
+
+}
+
+body{
+
+    text-transform: uppercase;
+
+    font-family: var(--ff-body);
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
+
+    background-color: var(--clr-bg-main);
+
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; 
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+
+
+
+}
+
+main{
+
+    --max-width: 450px;
+    --padding-inline: 1rem;
+    --padding-vertical: .5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 1.2rem;
+
+    position: absolute;
+
+    width: min(var(--max-width), 100% - (var(--padding-inline) * 2));
+    min-width: 300px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; 
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+
+
+}
+
+.keypad{
+
+    border-radius: 10px;
+
+    background-color: var(--clr-bg-keypad);
+
+    padding: 1rem;
+
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; 
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+
+    *{
+      transition: all 0.3s;
+      -moz-transition: all 0.3s; 
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+    }
+
+    table{
+      width: 100%;
+      height: 100%;
+      table-layout: fixed;
+
+      text-align: center;
+
+      tr{
+        height: 72px;
+      }
+
+      td{
+
+        --padding: 2%;
+
+        height: 100%;
+
+        padding: min(var(--padding), 100%);
+
+
+      }
+
+      input{
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        cursor: pointer;
+
+      }
+    }
+
+    .key{
+
+        border-radius: 10px;
+
+        background-color: var(--clr-bg-key);
+        box-shadow: 0 .2rem 0 0 var(--clr-shdw-key);
+        color: var(--clr-txt-key);
+
+        font-size: var(--fs-500);
+
+        border: none;
+
+        &:active{
+
+          background-color: var(--clr-active-key);
+
+          transition: none;
+
+        }
+
+    }
+    
+    .contrast-key{
+
+        text-transform: uppercase;
+
+        border-radius: 10px;
+
+        font-size: 1.5rem;
+    
+        background-color: var(--clr-bg-contrast-key);
+        box-shadow: 0 .2rem 0 0 var(--clr-shdw-contrast-key);
+        color: var(--clr-txt-contrast-key);
+
+        border: none;
+
+        &:active{
+
+          background-color: var(--clr-active-contrast-key);
+
+          transition: none;
+
+        }
+    
+    }
+    
+    .accent-key{
+
+        text-transform: uppercase;
+
+        border-radius: 10px;
+    
+        font-size: 1.5rem;
+
+        background-color: var(--clr-bg-accent-key);
+        box-shadow: 0 .2rem 0 0 var(--clr-shdw-accent-key);
+        color: var(--clr-txt-accent-key);
+
+        border: none;
+
+        &:active{
+
+          background-color: var(--clr-active-accent-key);
+
+          transition: none;
+
+        }
+
+    }
+
+}
+
+.toggle-container{
+
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; 
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+
+    .toggle{
+
+        background-color: var(--clr-bg-toggle);
+    
+    }
+
+}
+
+.screen{
+
+    width: 100%;
+    height: 100px;
+
+    border-radius: 10px;
+
+    background-color: var(--clr-bg-screen);
+    color: var(--clr-txt-main);
+
+    font-size: var(--fs-700);
+
+    padding: 1rem;
+
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; 
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+
+    span{
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        background: none;
+
+        text-align: right;
+
+        font-size: var(--fs-700);
+        color: var(--clr-txt-main);
+
+        transition: all 0.3s;
+        -moz-transition: all 0.3s; 
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+
+    }
+
+}
+
+.heading{
+
+    width: 100%;
+
+    color: var(--clr-txt-main);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; 
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+
+}
+
+.visible{
+
+  opacity: 1 !important;
+
+
+}
+
+/* main styles */
+
+.themes{
+
+    display: flex;
+
+    width: 150px;
+    
+    justify-content: space-between;
+    align-items: flex-end;
+
+    font-size: var(--fs-300);
+
+    .theme-numbers{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-around;
+
+        list-style-type: none;
+
+        transition: all 0.3s;
+        -moz-transition: all 0.3s; 
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+
+    }
+
+    .theme-picker{
+
+        width: 75px;
+        height: 25px;
+
+        border-radius: 30px;
+
+        background-color: var(--clr-bg-toggle);
+
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-around;
+
+        align-items: center;
+
+        list-style-type: none;
+
+        transition: all 0.3s;
+        -moz-transition: all 0.3s; 
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+
+        *{
+          transition: all 0.3s;
+          -moz-transition: all 0.3s; 
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+        }
+
+        li{
+
+          display: flex;
+          align-items: center;
+
+          button{
+
+            width: 15px;
+            height: 15px;
+
+            background-color: var(--clr-bg-contrast-key);
+            box-shadow: 0 1px 0 0 var(--clr-shdw-contrast-key);
+
+            border-radius: 10px;
+
+            opacity: 0;
+
+            border: none;
+
+            &:hover{
+              opacity: 1;
+            }
+
+            &:active{
+
+              background-color: var(--clr-active-contrast-key);
+
+              transition: none;
+
+            }
+
+          }
+
+        }
+
+                
+
+    }
+
+}
+
+.logo{
+  text-transform: lowercase;
+}
