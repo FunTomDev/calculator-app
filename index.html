@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon-32x32.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=League+Spartan:wght@100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+        <title>Calculator app</title>
+
+    </head>
+    <body>
+        
+        <main>
+            <section class="heading">
+                <div class="logo-block">
+                    <div></div>
+                    <div class="logo">calc</div>
+                </div>
+                
+                <div class="themes">
+                    <div>Theme</div>
+                    <div>
+                        <div>
+                            <ul class="theme-numbers">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="theme-picker">
+                                <li><button class="styleButton" value="th1" onclick="setCurrentScheme(this)"></button></li>
+                                <li><button class="styleButton" value="th2" onclick="setCurrentScheme(this)"></button></li>
+                                <li><button class="styleButton" value="th3" onclick="setCurrentScheme(this)"></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="screen">
+                <span>0</span>
+            </section>
+            <section class="keypad">
+                <div class="keys">
+                    <table>
+                        <tr>
+                            <td><input type="button" value="7" class="key"></td>
+                            <td><input type="button" value="8" class="key"></td>
+                            <td><input type="button" value="9" class="key"></td>
+                            <td><input type="button" value="del" class="accent-key"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="4" class="key"></td>
+                            <td><input type="button" value="5" class="key"></td>
+                            <td><input type="button" value="6" class="key"></td>
+                            <td><input type="button" value="-" class="key"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="1" class="key"></td>
+                            <td><input type="button" value="2" class="key"></td>
+                            <td><input type="button" value="3" class="key"></td>
+                            <td><input type="button" value="+" class="key"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="." class="key"></td>
+                            <td><input type="button" value="0" class="key"></td>
+                            <td><input type="button" value="/" class="key"></td>
+                            <td><input type="button" value="x" class="key"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="button" value="reset" class="accent-key"></td>
+                            <td colspan="2"><input type="button" value="=" class="contrast-key"></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+    </body>
+
+    <script src="main.js"></script>
+</html>
